@@ -1,11 +1,9 @@
 
-const getPokemonById = async (id, callback) => {
+const getPokemonById = (id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-           callback(data.name)
-        })  
-}
+    return fetch(url)
+        .then(resp => resp.json())
+        .then(() => {throw new Error('No se encontro el pokemon')})
+        .then(data => data.name)}
 
 module.exports = getPokemonById
