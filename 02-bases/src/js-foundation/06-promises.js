@@ -1,9 +1,10 @@
 
-const getPokemonById = (id) => {
+const getPokemonById = async(id) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`
-    return fetch(url)
-        .then(resp => resp.json())
-        .then(() => {throw new Error('No se encontro el pokemon')})
-        .then(data => data.name)}
+    const resp = await fetch(url)
+    const {name} = await resp.json()   
+    // throw new Error('No existe el pokemon')
+    return name
+}
 
 module.exports = getPokemonById
