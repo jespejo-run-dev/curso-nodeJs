@@ -1,10 +1,6 @@
-import { getAge } from "./plugin/get-age.plugin";
-// import { buildLogger } from "./plugin/logger.plugin"
+import { getPokemonById } from "./js-foundation/06-promises";
 
 
-
-// const logger = buildLogger('app.js')
-// logger.log('Hello world')
-// logger.error('error message')
-
-console.log(getAge('1990-01-01'));
+getPokemonById(1).then(
+    pokemon => console.log(pokemon)
+)
