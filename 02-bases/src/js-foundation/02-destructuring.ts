@@ -6,7 +6,7 @@ const {OS, PUBLIC, HOME} = process.env;
 
 console.table({OS, PUBLIC, HOME});
 
-const characters = ['Goku', 'Vegeta', 'Trunks'];
+export const characters = ['Goku', 'Vegeta', 'Trunks', 'Gohan'];
 const [,,trunks] = characters;
 
 console.log(trunks);
